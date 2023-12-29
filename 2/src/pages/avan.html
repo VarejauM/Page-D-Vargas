@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reuse.css">
+
+    <link rel="icon" href="../img/favicon.ico" type="image/icon type">
+    <title>Pacote Avançado</title>
+
+</head>
+
+<body>
+
+    <!-- MODAL E OVERLAY-->
+
+    <div class="overlay fullpage index-overlay toggle-modal"></div>
+
+    <div class="modal fullcenter index-modal roboto" id="modal-form">
+        <div class="header-modal">
+            <h1 class="title font-medium lightfont marg-bottom-15 kdam">Contato</h1>
+            <button class="shadow close-modal toggle-modal">X</button>
+        </div>
+        <div class="body-modal">
+            <div class="row marg-bottom-15">
+                <div class="col-sm-12">
+                    <p class="lightfont font-small marg-bottom-15">Informe seus dados abaixo e entraremos em contato</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <form>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="nome" class="lightfont roboto">Nome:</label>
+                                <input type="text" name="nome" id="nomeform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="tel" class="lightfont roboto">Telefone:</label>
+                                <input type="text" name="tel" id="telform" class="formfield" />
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="site" class="lightfont roboto">E-mail:</label>
+                                <input type="text" name="site" id="siteform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12">
+                                <label for="descr" class="lightfont roboto">Descreva brevemente o motivo do
+                                    contato:</label>
+                                <input type="text" name="descr" id="descrform" class="formfield txt-descr" />
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <button class="bt dodgerbt marg-top-15 shadow toggle-modal">Enviar solicitação</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header index-max">
+
+        <div class="container-fluid">
+
+            <div class="row roboto font-small lightfont inner-header no-gutters">
+                <div class="col-4 col-sm-2 col-lg-1 lightfont logo">
+                    <img onclick="abrirHome()" src="../img/demo.svg" alt="">
+                </div>
+
+                <div class="col-lg-8 menu-container" style="align-items: center;">
+
+                    <nav class="menu font-smaller">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="../../index.html#Pacotes">Pacotes</a>
+                        <a class="prod-a" onclick="abrirProds(1)" href="prods.html">Jogos</a>
+                        <a class="prod-a" onclick="abrirProds(2)" href="prods.html">Animações</a>
+                        <a class="prod-a" onclick="abrirProds(3)" href="prods.html">Plataformas</a>
+                        <a href="">Carreiras</a>
+                        <a class="toggle-modal" href="#">Contato</a>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <ion-icon name="logo-discord" size="large"></ion-icon><a href="">
+                                <p class="marg-left-5">Discord</p>
+                            </a>
+                        </div>
+                    </nav>
+
+                </div>
+
+                <div class="col-6 col-lg-3 login-container">
+                    <a class="discord-mob" href="">
+                        <ion-icon name="logo-discord" size="large"></ion-icon>
+                    </a>
+                    <button class="dodgerbt dodgerbt2 shadow ">REGISTRO</button>
+                    <button class="dodgerbt marg-left-15 shadow ">LOGIN</button>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Menu-mob e block -->
+
+    <div class="col-sm-1  menu-mob index-max">
+        <button class="menu-mob-bt">
+            <ion-icon name="menu" size="large"></ion-icon>
+        </button>
+
+    </div>
+
+    <div class="menu-mob-block index-submax roboto lightfont font-smallest">
+
+        <nav class="nav-mob offset-top">
+            <a href="sobre.html">Sobre</a>
+            <a href="../../index.html#Pacotes">Pacotes</a>
+            <a onclick="abrirProds(1)" href="prods.html">Jogos</a>
+            <a onclick="abrirProds(1)" href="prods.html">Animações</a>
+            <a onclick="abrirProds(1)" href="prods.html">Plataformas</a>
+            <a href="#">Carreiras</a>
+            <a class="toggle-modal close-block" href="#">Contato</a>
+        </nav>
+
+    </div>
+
+    <div class="overlay-mob index-med close-block"></div>
+
+
+    <section class="bg-darkest sections roboto lightfont">
+
+        <div class="container-fluid offset-top pacote-geral">
+            <h1 class="lightfont font-medium marg-top-15 marg-bottom-30">PACOTE AVANÇADO</h1>
+
+            <div class="container video-present">
+                <div class="row" style="justify-content: center;">
+                    <video controls poster="../img/demo.png">
+                        <source src="../vid/video2.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/video2.mp4" type="application/x-shockwave-flash" allowfullscreen="false"
+                                allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+            </div>
+            <div class="container video-legenda">
+                <h1 class="lightfont font-normal marg-top-30 ">LEGENDA</h1>
+                <p class="font-small legenda"> &emsp;A gente sabe que as vezes ter o projeto pronto nem sempre é tudo o
+                    que
+                    deve ser feito para levar ele ao sucesso, uma parte muito importante de toda boa empreitada rumo as
+                    estrelas é o Marketing/Atendimento/Suporte ou melhor, toda a estratégia de Marketing e é por isso
+                    que a D'Vargas criou o pacote avançado onde não só criaremos o seu projeto como também lhe daremos o
+                    suporte posterior com assistência técnicas e escalabilidade. Você tem um sonho? Quer levar sua
+                    empresa até o ponto X? Nós vamos junto com vocês nessa caminhada!
+                    <br>
+                    &emsp;Ok, mas como funciona?
+                    <br>
+                    &emsp;Ao passo que todo o período de desenvolvimento é feito nossos especialistas montam o que vem a
+                    ser a
+                    estratégia de combate do seu projeto diante do mercado, traçando o que deverá ser feito com o
+                    produto em questão. O valor não é orçado junto com o projeto não se preocupe, apenas a consultoria
+                    mensal e mão de obra estão incluídas na acessória em especifico. Durante 2 meses de analise nós
+                    estudaremos o ponto central do problema pelo qual seu projeto existe e veio resolver aumentando suas
+                    chances de sucesso em 12% a cada mês de analise.
+                    <br>
+                    &emsp;Quer saber mais? Entre em contato pelo botão abaixo, até daqui a pouco, tchau tchau.
+                </p>
+
+                <button class="dodgerbt marg-bottom-30 marg-top-15 toggle-modal close-block">ENTRE EM
+                    CONTATO</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/anime.min.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/prods.js"></script>
+
+
+</body>
+
+<footer class="footer roboto lightfont">
+    <h1 class="font-smaller marg-top-15">D'Vargas Studio. Todos os direitos Reservados</h1>
+    <div class="redes-footer">
+        <a href="https://www.instagram.com/dvargas_studio/" target="_blank">
+            <ion-icon name="logo-instagram" size="large"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/DonnVargasStudio" target="_blank">
+            <ion-icon name="logo-facebook" size="large"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/channel/UC1NlpDnyr3Sf6BFDTHuspWA" target="_blank">
+            <ion-icon name="logo-youtube" size="large"></ion-icon>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5524992482724&text&app_absent=0" target="_blank">
+            <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+        </a>
+    </div>
+    <p class="font-smallest marg-bottom-15">R. Agostinho de Souza Amaral, 514
+        Madruga, Vassouras - RJ, 27700-000
+        <br>
+        Telefone: (24) 99248-2724
+    </p>
+</footer>
+
+</html>

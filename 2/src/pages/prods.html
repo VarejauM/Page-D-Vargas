@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reuse.css">
+
+    <link rel="icon" href="../img/favicon.ico" type="image/icon type">
+    <title>Produtos</title>
+
+</head>
+
+<body>
+
+    <!-- MODAL E OVERLAY-->
+
+    <div class="overlay fullpage index-overlay toggle-modal "></div>
+
+    <div class="modal fullcenter index-modal roboto" id="modal-form">
+        <div class="header-modal">
+            <h1 class="title font-medium lightfont marg-bottom-15 kdam">Contato</h1>
+            <button class="shadow close-modal toggle-modal">X</button>
+        </div>
+        <div class="body-modal">
+            <div class="row marg-bottom-15">
+                <div class="col-sm-12">
+                    <p class="lightfont font-small marg-bottom-15">Informe seus dados abaixo e entraremos em contato</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <form>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="nome" class="lightfont roboto">Nome:</label>
+                                <input type="text" name="nome" id="nomeform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="tel" class="lightfont roboto">Telefone:</label>
+                                <input type="text" name="tel" id="telform" class="formfield" />
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="site" class="lightfont roboto">E-mail:</label>
+                                <input type="text" name="site" id="siteform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12">
+                                <label for="descr" class="lightfont roboto">Descreva brevemente o motivo do
+                                    contato:</label>
+                                <input type="text" name="descr" id="descrform" class="formfield txt-descr" />
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <button class="bt dodgerbt marg-top-15 shadow toggle-modal">Enviar solicitação</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header index-max">
+
+        <div class="container-fluid">
+
+            <div class="row roboto font-small lightfont inner-header no-gutters">
+                <div class="col-4 col-sm-2 col-lg-1 lightfont logo">
+                    <img onclick="abrirHome()" src="../img/demo.svg" alt="">
+                </div>
+
+                <div class="col-lg-8 menu-container" style="align-items: center;">
+
+                    <nav class="menu font-smaller">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="../../index.html#Pacotes">Pacotes</a>
+                        <a class="prod-a" onclick="abrirProds(1)" href="prods.html">Jogos</a>
+                        <a class="prod-a" onclick="abrirProds(2)" href="prods.html">Animações</a>
+                        <a class="prod-a" onclick="abrirProds(3)" href="prods.html">Plataformas</a>
+                        <a href="">Carreiras</a>
+                        <a class="toggle-modal" href="#">Contato</a>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <ion-icon name="logo-discord" size="large"></ion-icon><a href="">
+                                <p class="marg-left-5">Discord</p>
+                            </a>
+                        </div>
+                    </nav>
+
+                </div>
+
+                <div class="col-6 col-lg-3 login-container">
+                    <a class="discord-mob" href="">
+                        <ion-icon name="logo-discord" size="large"></ion-icon>
+                    </a>
+                    <button class="dodgerbt dodgerbt2 shadow ">REGISTER</button>
+                    <button class="dodgerbt marg-left-15 shadow ">LOGIN</button>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <!-- Menu-mob e block -->
+
+    <div class="col-sm-1  menu-mob index-max">
+        <button class="menu-mob-bt">
+            <ion-icon name="menu" size="large"></ion-icon>
+        </button>
+
+    </div>
+
+    <div class="menu-mob-block index-submax roboto lightfont font-smallest">
+
+        <nav class="nav-mob offset-top">
+            <a href="sobre.html">Sobre</a>
+            <a href="../../index.html#Pacotes">Pacotes</a>
+            <a onclick="abrirProds(1)" href="prods.html">Jogos</a>
+            <a onclick="abrirProds(1)" href="prods.html">Animações</a>
+            <a onclick="abrirProds(1)" href="prods.html">Plataformas</a>
+            <a href="#">Carreiras</a>
+            <a class="toggle-modal close-block" href="#">Contato</a>
+        </nav>
+
+    </div>
+
+    <div class="overlay-mob index-med close-block"></div>
+
+    <!-- Prods -->
+
+    <section class="sections bg-darkest roboto lightfont">
+
+        <!-- Games -->
+
+        <div class="container-fluid offset-top prods-geral">
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/BodeleTheHomeless.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> Bodelé: The Homeless</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Aventura</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.DVargasStudios.BodeletheHomeless.InfinityRunner"
+                            target="_blank"><button class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/DanDansGardenCover.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> DanDan`s Garden</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Aventura</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.DVargasStudio.DanDansGarden.TowerDefenseGame"
+                            target="_blank"> <button class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/DragDealCover.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> Drag Deal</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>MMORPG</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Em andanmento</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>PC/Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.instagram.com/dragdealgame/" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/GoldenStars.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> Golden Stars</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Fantasia</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Em andamento</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/channel/UCutfJRaolgaLihsyam2U4hw" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Animações -->
+
+        <div class="container-fluid offset-top prods-geral">
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/DiaADiaIdadeMediaCover.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30">O Dia a Dia de um Cidadão Comum na Idade Média</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Animação</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PRODUTORES</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE PRODUÇÃO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Youtube</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=_QGi5II1MLA" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/ManualSobrevivenciaCover.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30">Manual de Ultra Sobrevivência</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Animação</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PRODUTORES</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE PRODUÇÃO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Youtube</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=jioiSZ8Cjdw" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/ShowBodeleCover.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> Show do Bodelé</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Animação</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE PRODUÇÃO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Youtube</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.youtube.com/watch?v=oGWw5nCZliw" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Plataformas -->
+
+        <div class="container-fluid offset-top prods-geral">
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/tribus.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30"> Tribhus</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Música</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Pc/Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://tribhus.com/" target="_blank"><button class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/pet.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30">Pet Booking</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Pesquisador de Serviços</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Pc/Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://petbooking.com.br/" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container prod-cont shadow marg-bottom-30">
+
+                <div class="row prod-line">
+
+                    <div class="col-12 col-sm-6 prod-image">
+                        <img src="../img/projects/dismelo.png" alt="">
+                    </div>
+
+                    <div class="col-12 col-sm-6 prod-info">
+
+                        <h1 class="marg-bottom-30">Dismelo</h1>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>GÊNERO</P>
+                                <p>Distribuidora</p>
+                            </div>
+                            <div class="info-col">
+                                <P>DESENVOLVEDOR</P>
+                                <p>D'Vargas Studios</p>
+                            </div>
+                        </div>
+
+                        <div class="info-line">
+                            <div class="info-col">
+                                <P>STATUS DE DESENVOLVIMENTO</P>
+                                <p>Pronto</p>
+                            </div>
+                            <div class="info-col">
+                                <P>PLATAFORMA</P>
+                                <p>Pc/Mobile</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.dismelo.com.br/" target="_blank"><button
+                                class="dodgerbt">Visitar</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/anime.min.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/prods.js"></script>
+    <script src="../../home.js"></script>
+
+
+</body>
+
+<footer class="footer roboto lightfont">
+    <h1 class="font-smaller marg-top-15">D'Vargas Studio. Todos os direitos Reservados</h1>
+    <div class="redes-footer">
+        <a href="https://www.instagram.com/dvargas_studio/" target="_blank">
+            <ion-icon name="logo-instagram" size="large"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/DonnVargasStudio" target="_blank">
+            <ion-icon name="logo-facebook" size="large"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/channel/UC1NlpDnyr3Sf6BFDTHuspWA" target="_blank">
+            <ion-icon name="logo-youtube" size="large"></ion-icon>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5524992482724&text&app_absent=0" target="_blank">
+            <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+        </a>
+    </div>
+    <p class="font-smallest marg-bottom-15">R. Agostinho de Souza Amaral, 514
+        Madruga, Vassouras - RJ, 27700-000
+        <br>
+        Telefone: (24) 99248-2724
+    </p>
+</footer>
+
+
+
+
+</html>

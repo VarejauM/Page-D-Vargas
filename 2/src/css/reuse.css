@@ -1,0 +1,450 @@
+/* CLASSES REUTILIZÁVEIS */
+
+/*--Fontes--*/
+.kdam {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-style: italic;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.font-title {
+    font-size: 60px;
+}
+
+.font-ultra {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.font-large {
+    font-size: 45px;
+}
+
+.font-medium {
+    font-size: 30px;
+}
+
+.font-normal {
+    font-size: 22px;
+}
+
+.font-small {
+    font-size: 17px;
+}
+
+.font-smaller {
+    font-size: 15px;
+}
+
+.font-smallest {
+    font-size: 13px;
+}
+
+.darkfont {
+    color: black;
+}
+
+
+.lightfont {
+    color: whitesmoke;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+/*--Botões--*/
+
+.dodgerbt {
+    height: 30px;
+    background-color: dodgerblue;
+    padding: 2px 10px;
+    font-size: 9px;
+    font-weight: bold;
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.dodgerbt2 {
+    background-color: transparent;
+    border: 2px solid dodgerblue;
+    color: dodgerblue;
+}
+
+.dodgerbt:hover {
+    background-color: blue;
+}
+
+.dodgerbt2:hover {
+    background-color: rgba(211, 211, 211, 0.263);
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+    .dodgerbt,
+    .dodgerbt2 {
+        height: 40px;
+        font-size: 13px;
+        padding: 4px 22px;
+    }
+}
+
+
+
+
+.blackbt {
+    height: 50px;
+    background-color: black;
+    padding: 5px 35px;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* Tags */
+
+.gametag {
+    display: table;
+    height: 20px;
+    background-color: gold;
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 10px;
+}
+
+.gametag2 {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid gold;
+    border-top: 10px solid gold;
+}
+
+.animationtag {
+    display: table;
+    height: 20px;
+    background-color: orangered;
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 10px;
+}
+
+.animationtag2 {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid orangered;
+    border-top: 10px solid orangered;
+}
+
+.platformtag {
+    display: table;
+    height: 20px;
+    background-color: green;
+    padding: 4px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 10px;
+}
+
+.platformtag2 {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid green;
+    border-top: 10px solid green;
+}
+
+@media screen and (min-width: 992px) {
+
+    .gametag,
+    .animationtag,
+    .platformtag {
+        height: 28px;
+        padding: 7px 10px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .gametag2 {
+        border-bottom: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-left: 14px solid gold;
+        border-top: 14px solid gold;
+    }
+
+    .animationtag2 {
+        border-bottom: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-left: 14px solid orangered;
+        border-top: 14px solid orangered;
+    }
+
+    .platformtag2 {
+        border-bottom: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-left: 14px solid green;
+        border-top: 14px solid green;
+    }
+
+}
+
+/* -- Espaçamento -- */
+@media screen and (min-width: 320px) {
+    .offset-top {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .offset-top {
+        margin-top: 105px;
+    }
+}
+
+.pad-5 {
+    padding: 5px;
+}
+
+.pad-top-5 {
+    padding-top: 5px;
+}
+
+.pad-right-5 {
+    padding-right: 5px;
+}
+
+.pad-bottom-5 {
+    padding-bottom: 5px;
+}
+
+.pad-left-5 {
+    padding-left: 5px;
+}
+
+.pad-15 {
+    padding: 15px;
+}
+
+.pad-top-15 {
+    padding-top: 15px;
+}
+
+.pad-right-15 {
+    padding-right: 15px;
+}
+
+.pad-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.pad-left-15 {
+    padding-left: 15px;
+}
+
+.marg-5 {
+    margin: 5px;
+}
+
+.marg-top-5 {
+    margin-top: 5px;
+}
+
+.marg-right-5 {
+    margin-right: 5px;
+}
+
+.marg-bottom-5 {
+    margin-bottom: 5px;
+}
+
+.marg-left-5 {
+    margin-left: 5px;
+}
+
+.marg-5 {
+    margin: 5px;
+}
+
+.marg-top-15 {
+    margin-top: 15px;
+}
+
+.marg-right-15 {
+    margin-right: 15px;
+}
+
+.marg-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.marg-left-15 {
+    margin-left: 15px;
+}
+
+.marg-30 {
+    margin: 30px;
+}
+
+.marg-top-30 {
+    margin-top: 30px;
+}
+
+.marg-right-30 {
+    margin-right: 30px;
+}
+
+.marg-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.marg-left-30 {
+    margin-left: 30px;
+}
+
+.marg-60 {
+    margin: 60px;
+}
+
+.marg-top-60 {
+    margin-top: 60px;
+}
+
+.marg-right-60 {
+    margin-right: 60px;
+}
+
+.marg-bottom-60 {
+    margin-bottom: 60px;
+}
+
+.marg-left-60 {
+    margin-left: 60px;
+}
+
+/*-- Posicionamento --*/
+
+.index-modal {
+    z-index: 3000;
+}
+
+.index-overlay {
+    z-index: 2500;
+}
+
+.index-max {
+    z-index: 2000;
+}
+
+.index-submax {
+    z-index: 1000;
+}
+
+.index-med {
+    z-index: 100;
+}
+
+.index-normal {
+    z-index: 10;
+}
+
+.index-min {
+    z-index: 1;
+}
+
+
+.fullcenter {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.fullpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.horizontal-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/*--Sombra--*/
+
+.shadow {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.shadow:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.shadow2 {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.79);
+}
+
+/* BG */
+
+
+.bg-darkest {
+    background-color: rgb(44, 48, 51);
+}
+
+.bg-light {
+    background-color: whitesmoke;
+}
+
+/* utilitários */
+
+.visible {
+    display: block !important;
+}
+
+.visible-detalhe {
+    display: table !important;
+}

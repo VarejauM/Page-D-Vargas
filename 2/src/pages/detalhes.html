@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reuse.css">
+
+    <link rel="icon" href="../img/favicon.ico" type="image/icon type">
+    <title>Detalhes</title>
+
+</head>
+
+<body>
+
+    <!-- MODAL E OVERLAY-->
+
+    <div class="overlay fullpage index-overlay toggle-modal "></div>
+
+    <div class="modal fullcenter index-modal roboto" id="modal-form">
+        <div class="header-modal">
+            <h1 class="title font-medium lightfont marg-bottom-15 kdam">Contato</h1>
+            <button class="shadow close-modal toggle-modal">X</button>
+        </div>
+        <div class="body-modal">
+            <div class="row marg-bottom-15">
+                <div class="col-sm-12">
+                    <p class="lightfont font-small marg-bottom-15">Informe seus dados abaixo e entraremos em contato</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <form>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="nome" class="lightfont roboto">Nome:</label>
+                                <input type="text" name="nome" id="nomeform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="tel" class="lightfont roboto">Telefone:</label>
+                                <input type="text" name="tel" id="telform" class="formfield" />
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                                <label for="site" class="lightfont roboto">E-mail:</label>
+                                <input type="text" name="site" id="siteform" class="formfield" />
+                            </div>
+                        </div>
+
+                        <div class="row marg-bottom-15">
+                            <div class="col-sm-12">
+                                <label for="descr" class="lightfont roboto">Descreva brevemente o motivo do
+                                    contato:</label>
+                                <input type="text" name="descr" id="descrform" class="formfield txt-descr" />
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <button class="bt dodgerbt marg-top-15 shadow toggle-modal">Enviar solicitação</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="header index-max">
+
+        <div class="container-fluid">
+
+            <div class="row roboto font-small lightfont inner-header no-gutters">
+                <div class="col-4 col-sm-2 col-lg-1 lightfont logo">
+                    <img onclick="abrirHome()" src="../img/demo.svg" alt="">
+                </div>
+
+                <div class="col-lg-8 menu-container" style="align-items: center;">
+
+                    <nav class="menu font-smaller">
+                        <a href="sobre.html">Sobre</a>
+                        <a href="../../index.html#Pacotes">Pacotes</a>
+                        <a class="prod-a" onclick="abrirProds(1)" href="prods.html">Jogos</a>
+                        <a class="prod-a" onclick="abrirProds(2)" href="prods.html">Animações</a>
+                        <a class="prod-a" onclick="abrirProds(3)" href="prods.html">Plataformas</a>
+                        <a href="">Carreiras</a>
+                        <a class="toggle-modal" href="#">Contato</a>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <ion-icon name="logo-discord" size="large"></ion-icon><a href="">
+                                <p class="marg-left-5">Discord</p>
+                            </a>
+                        </div>
+                    </nav>
+
+                </div>
+
+                <div class="col-6 col-lg-3 login-container">
+                    <a class="discord-mob" href="">
+                        <ion-icon name="logo-discord" size="large"></ion-icon>
+                    </a>
+                    <button class="dodgerbt dodgerbt2 shadow ">REGISTRO</button>
+                    <button class="dodgerbt marg-left-15 shadow ">LOGIN</button>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Menu-mob e block -->
+
+    <div class="col-sm-1  menu-mob index-max">
+        <button class="menu-mob-bt">
+            <ion-icon name="menu" size="large"></ion-icon>
+        </button>
+
+    </div>
+
+    <div class="menu-mob-block index-submax roboto lightfont font-smallest">
+        <nav class="nav-mob offset-top">
+            <a href="sobre.html">Sobre</a>
+            <a href="../../index.html#Pacotes">Pacotes</a>
+            <a onclick="abrirProds(1)" href="prods.html">Jogos</a>
+            <a onclick="abrirProds(1)" href="prods.html">Animações</a>
+            <a onclick="abrirProds(1)" href="prods.html">Plataformas</a>
+            <a href="#">Carreiras</a>
+            <a class="toggle-modal close-block" href="#">Contato</a>
+        </nav>
+    </div>
+
+    <div class="overlay-mob index-med close-block"></div>
+
+
+    <!-- Detalhes -->
+
+    <section class="sections bg-darkest roboto lightfont">
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Bodelé: The Homeless</h1>
+
+            <div class="row marg-bottom-30">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/BodeleTheHomeless.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/BodeleTheHomeless.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Acompanhe Bodelé pelos confins da
+                        terra em busca de almas perdidas na aventura mais louca do Homeless mais
+                        simpático dos Games. Bodelé: the Homeless vai te prender em outra dimensão.</p>
+
+
+                    <a href="https://play.google.com/store/apps/details?id=com.DVargasStudios.BodeletheHomeless.InfinityRunner"
+                        target="_blank"><button class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class=" col-12 col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/UnityLogo.png" alt="">
+                    <img src="../img/tools/CorelDrawLogo.png" alt="">
+                    <img src="../img/tools/PiskelLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o Unity como
+                        game
+                        engine, o
+                        CorelDraw e o Piskel para a
+                        criação dos assets, além do Reaper para a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Dan Dan's Garden</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/DanDansGarden.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/DanDansGarden.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;O porteiro mais estressado do mundo
+                        agora tem o proprio jogo e você claramente não vai querer enfrentá-lo. Já
+                        disponivel na Play Store, o nosso Dandan's Garden é de tirar o fôlego!</p>
+
+
+                    <a href="https://play.google.com/store/apps/details?id=com.DVargasStudio.DanDansGarden.TowerDefenseGame"
+                        target="_blank"><button class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/UnityLogo.png" alt="">
+                    <img src="../img/tools/PhotoshopLogo.png" alt="">
+                    <img src="../img/tools/PremiereLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o Unity como
+                        game engine, o Photoshop para a criação dos assets, o Premiere para edição de vídeo e o Reaper
+                        para a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Dia a Dia de um Cidadão comum na Idade Média</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/IdadeMedia.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/IdadeMedia.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Walter é um cidadão comum da idade
+                        média nos ajudando a entender como era o dia a dia de uma das épocas mais
+                        icónicas da humanidade, prepare a pipoca para maratonar todos os episódios
+                        deste maravilhoso stand-up em forma de documentario</p>
+
+
+                    <a href="https://www.youtube.com/watch?v=_QGi5II1MLA" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/AfterEffectsLogo.png" alt="">
+                    <img src="../img/tools/PremiereLogo.png" alt="">
+                    <img src="../img/tools/KritaLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o Krita, para a
+                        criação da arte, o Premiere e o After Effects para o desenvolvimento da animação e o Reaper para
+                        a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Drag Deal Cover</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/DragDeal.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/DragDeal.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Monte sua drag, batalhe em vários
+                        mini-games e ainda produza suas próprias peças para comercializar! Tudo isso
+                        em Drag Deal, direto da Steam, junto com seus amigos as baladas mais
+                        cobiçadas estão a sua espera!</p>
+
+
+                    <a href="https://www.instagram.com/dragdealgame/" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/UnityLogo.png" alt="">
+                    <img src="../img/tools/CCLogo.png" alt="">
+                    <img src="../img/tools/MayaLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas que estão sendo utilizadas para esse projeto foram
+                        o Unity como game engine, o Character Creator para a criação das personagens, o Maya para a
+                        modelagem dos assets e o Reaper para a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Golden Stars</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/GoldenStars.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/GoldenStars.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;As maiores estrelas Teen, em sua
+                        intimidade, agora ao alcance de um click. Acompanhe a carreira e a vida do
+                        seu artista favorito e é claro as últimas notícias do mundo pop.</p>
+
+
+                    <a href="https://www.youtube.com/channel/UCutfJRaolgaLihsyam2U4hw" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/JavaScriptLogo.png" alt="">
+                    <img src="../img/tools/PhotoshopLogo.png" alt="">
+                    <img src="../img/tools/PremiereLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o JavaScript
+                        para a produção do App(Em Desenvolvimento), o Photoshop para criação e edição de imagens e
+                        fotos, o Premiere para edição de vídeo e o Reaper para a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Manual de Ultra Sobrevivência</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/ManualSobrevivencia.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/ManualSobrevivencia.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Especialista em Ultra sobrevivência
+                        Raskonikov é o mais novo contratado da D'Vargas e já chegou mostrando a que
+                        veio, topando qualquer parada, nos territórios mais mortais da terra! Aperte
+                        os cintos e faça o suco de maracujá porque é adrenalina pura Ultra
+                        sobreviver a tudo!</p>
+
+
+                    <a href="https://www.youtube.com/watch?v=jioiSZ8Cjdw" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/AfterEffectsLogo.png" alt="">
+                    <img src="../img/tools/PremiereLogo.png" alt="">
+                    <img src="../img/tools/KritaLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o Krita, para a
+                        criação da arte, o Premiere e o After Effects para o desenvolvimento da animação e o Reaper para
+                        a mixagem e edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Show do Bodelé</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video controls>
+                        <source src="../vid/ShowDoBodele.mp4" type="video/mp4">
+                        <object>
+                            <embed src="../vid/ShowDoBodele.mp4" type="application/x-shockwave-flash"
+                                allowfullscreen="false" allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>GÊNERO</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Aventura</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;O Homeless mais cobiçado de Hollywood
+                        agora com seu próprio programa de TV e coordenando tudo, o show é dele e
+                        sempre vai ser. Venha dar gargalhadas com a voz de Michael Jackson...
+                        opsss... Do nosso Show do Bodelé</p>
+
+
+                    <a href="https://www.youtube.com/watch?v=oGWw5nCZliw" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+            <!-- Ferramentas -->
+
+            <h3 class="marg-bottom-15" style="text-align: center;"> Ferramentas Utilizadas</h3>
+
+            <div class="row">
+
+                <div class="col-lg-10 offset-lg-1 tools">
+                    <img src="../img/tools/PremiereLogo.png" alt="">
+                    <img src="../img/tools/ClipStudioLogo.png" alt="">
+                    <img src="../img/tools/ReaperLogo.png" alt="">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <p class="tools-text font-smaller">As ferramentas utilizadas para esse projeto foram o ClipStudio
+                        para a criação da arte e animação, o Premiere para a edição do vídeo e o Reaper para a mixagem e
+                        edição sonora.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-30">
+
+            <h1 class="game-title font-medium marg-bottom-30">Tribhus</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video poster="../img/projects/tribus.png">
+                        <source src="" type="video/mp4">
+                        <object>
+                            <embed src="" type="application/x-shockwave-flash" allowfullscreen="false"
+                                allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Pc/Mobile</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Uma plataforma de streaming de música que tem a missão de
+                        proporcionar a
+                        melhor experiência para bandas do cenário de rock e suas vertentes em âmbito
+                        nacional, compartilhando suas músicas, divulgando agenda e seus produtos.</p>
+
+
+                    <a href="https://tribhus.com/" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-60">
+
+            <h1 class="game-title font-medium marg-bottom-30">Pet Booking</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video poster="../img/projects/pet.png">
+                        <source src="" type="video/mp4">
+                        <object>
+                            <embed src="" type="application/x-shockwave-flash" allowfullscreen="false"
+                                allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Mobile</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp;Encontre e agende nos melhores Pet Shops, Clínicas Veterinárias,
+                        Hotéis,
+                        Adestradores, Passeadores, a qualquer hora e lugar, em poucos segundos!</p>
+
+
+                    <a href="https://petbooking.com.br/" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container game-details offset-top marg-bottom-60">
+
+            <h1 class="game-title font-medium marg-bottom-30">Dismelo</h1>
+
+            <div class="row marg-bottom-15">
+                <div class="col-lg-8 img-container">
+                    <video poster="../img/projects/dismelo.png">
+                        <source src="" type="video/mp4">
+                        <object>
+                            <embed src="" type="application/x-shockwave-flash" allowfullscreen="false"
+                                allowscriptaccess="always">
+                        </object>
+                        Formato não suportado
+                    </video>
+                </div>
+
+                <div class="col-lg-4 game-info">
+                    <div class="game-info-head font-small">
+                        <div class="game-info-head-inner t1">
+                            <p>DESENVOLVEDOR</p>
+                            <p>PLATAFORMA</p>
+                            <p>STATUS</p>
+                        </div>
+                        <div class="game-info-head-inner t2">
+                            <p>D'Vargas</p>
+                            <p>Pc/Mobile</p>
+                            <p>Lançado</p>
+                        </div>
+
+                    </div>
+
+                    <p class="marg-top-30"> &emsp;&emsp; Maior atacadista distribuidor do Pará no ranking ABAD/NIELSEN
+                        2021</p>
+
+
+                    <a href="https://www.dismelo.com.br/" target="_blank"><button
+                            class="dodgerbt marg-top-60">Mais...</button></a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/anime.min.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/detalhes.js"></script>
+    <script src="../js/prods.js"></script>
+
+
+</body>
+
+<footer class="footer roboto lightfont">
+    <h1 class="font-smaller marg-top-15">D'Vargas Studio. Todos os direitos Reservados</h1>
+    <div class="redes-footer">
+        <a href="https://www.instagram.com/dvargas_studio/" target="_blank">
+            <ion-icon name="logo-instagram" size="large"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/DonnVargasStudio" target="_blank">
+            <ion-icon name="logo-facebook" size="large"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/channel/UC1NlpDnyr3Sf6BFDTHuspWA" target="_blank">
+            <ion-icon name="logo-youtube" size="large"></ion-icon>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=5524992482724&text&app_absent=0" target="_blank">
+            <ion-icon name="logo-whatsapp" size="large"></ion-icon>
+        </a>
+    </div>
+    <p class="font-smallest marg-bottom-15">R. Agostinho de Souza Amaral, 514
+        Madruga, Vassouras - RJ, 27700-000
+        <br>
+        Telefone: (24) 99248-2724
+    </p>
+</footer>
+
+</html>
